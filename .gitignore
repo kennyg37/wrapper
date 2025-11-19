@@ -1,18 +1,11 @@
 # Backend (Go)
-backend/bin/
-backend/tmp/
-backend/*.out
-backend/coverage.html
-backend/.env
+bin/
+tmp/
+*.out
+coverage.html
+.env
 
 # Frontend (Node/SvelteKit)
-frontend/node_modules/
-frontend/.svelte-kit/
-frontend/build/
-frontend/.env
-frontend/.env.local
-frontend/playwright-report/
-frontend/test-results/
 
 # General
 *.log
