@@ -2,7 +2,7 @@
 
 A powerful backend API that uses OpenAI's ChatGPT to generate realistic mock data based on scenarios. Built with Go and Fiber framework.
 
-## 🎯 Features
+## Features
 
 - **AI-Powered Data Generation**: Uses OpenAI GPT to generate contextually appropriate mock data
 - **Multiple Export Formats**: JSON, CSV, Markdown, and SQL
@@ -12,13 +12,13 @@ A powerful backend API that uses OpenAI's ChatGPT to generate realistic mock dat
 - **Tested**: Comprehensive unit tests for core functionality
 - **Fast**: Built on Fiber (fasthttp) for high performance
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Go 1.21+**: [Download Go](https://golang.org/dl/)
 - **PostgreSQL 12+**: [Download PostgreSQL](https://www.postgresql.org/download/)
 - **OpenAI API Key**: [Get API Key](https://platform.openai.com/api-keys)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone and Navigate
 
@@ -81,7 +81,7 @@ go run cmd/api/main.go
 
 The server will start on `http://localhost:3000`
 
-## 📚 API Documentation
+## API Documentation
 
 ### Endpoints
 
@@ -154,7 +154,7 @@ GET /api/data/:id/export?format=markdown
 GET /api/data/:id/export?format=sql&table=products
 ```
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 # Run all tests
@@ -174,7 +174,7 @@ go test -run TestExportService_ToCSV ./internal/services
 go test -v ./...
 ```
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 backend/
@@ -206,7 +206,7 @@ backend/
 └── README.md                    # This file
 ```
 
-## 🎓 Learning Concepts
+## Learning Concepts
 
 This codebase demonstrates many important Go and web development concepts:
 
@@ -234,7 +234,7 @@ This codebase demonstrates many important Go and web development concepts:
 - **Repository Pattern**: Database abstraction (simplified)
 - **DTO Pattern**: Separate request/response objects from models
 
-## 🔧 Common Tasks
+## Common Tasks
 
 ### Add a New Endpoint
 
@@ -257,7 +257,7 @@ This codebase demonstrates many important Go and web development concepts:
 3. **Update queries** in handlers
 4. **Test thoroughly**
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Database Connection Failed
 - Verify PostgreSQL is running: `pg_isready`
@@ -273,7 +273,7 @@ This codebase demonstrates many important Go and web development concepts:
 - Change PORT in `.env`
 - Or kill the process: `lsof -ti:3000 | xargs kill`
 
-## 📦 Dependencies
+## Dependencies
 
 - **fiber/v2**: Web framework
 - **lib/pq**: PostgreSQL driver
@@ -281,7 +281,7 @@ This codebase demonstrates many important Go and web development concepts:
 - **godotenv**: Environment variable loading
 - **testify**: Testing assertions
 
-## 🚀 Deployment
+## Deployment
 
 ### Using Docker (Recommended)
 
@@ -318,11 +318,11 @@ Remember to set these in your production environment:
 - Use a reverse proxy (nginx, Caddy)
 - Enable HTTPS
 
-## 📝 License
+## License
 
 This is a learning project. Feel free to use and modify as needed.
 
-## 🤝 Contributing
+## Contributing
 
 This is a learning project, but improvements are welcome:
 1. Fork the repository
@@ -331,7 +331,7 @@ This is a learning project, but improvements are welcome:
 4. Add tests
 5. Submit a pull request
 
-## 📞 Support
+## Support
 
 For issues or questions:
 - Check the troubleshooting section
