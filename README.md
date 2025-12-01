@@ -206,84 +206,10 @@ backend/
 └── README.md                    # This file
 ```
 
-## Learning Concepts
-
-This codebase demonstrates many important Go and web development concepts:
-
-### Go Concepts
-- **Package Organization**: Separation of concerns with internal packages
-- **Error Handling**: Proper error propagation and custom error types
-- **Interfaces**: Service abstractions for testability
-- **Struct Tags**: JSON serialization with struct tags
-- **Goroutines**: Concurrent request handling (built into Fiber)
-- **Context**: Request cancellation and timeouts
-- **Testing**: Unit tests with table-driven tests
-
-### Web Development Concepts
-- **RESTful API Design**: Resource-based URLs and HTTP methods
-- **Middleware Pattern**: Request/response pipeline
-- **CORS**: Cross-origin resource sharing
-- **Error Responses**: Consistent error handling
-- **Database Migrations**: Version-controlled schema changes
-- **Connection Pooling**: Efficient database connections
-- **Environment Variables**: Configuration management
-
-### Architecture Patterns
-- **Layered Architecture**: Handlers → Services → Database
-- **Dependency Injection**: Passing dependencies to constructors
-- **Repository Pattern**: Database abstraction (simplified)
-- **DTO Pattern**: Separate request/response objects from models
-
-## Common Tasks
-
-### Add a New Endpoint
-
-1. **Define the model** in `internal/models/models.go`
-2. **Create the handler** in `internal/handlers/handlers.go`
-3. **Register the route** in `cmd/api/main.go`
-4. **Write tests** in `internal/handlers/handlers_test.go`
-
-### Add a New Export Format
-
-1. **Create the export method** in `internal/services/export.go`
-2. **Add format to GetAvailableFormats()**
-3. **Update the switch statement** in `handlers.ExportMockData()`
-4. **Write tests** in `internal/services/export_test.go`
-
-### Modify Database Schema
-
-1. **Update the migration** in `internal/database/database.go`
-2. **Update the model** in `internal/models/models.go`
-3. **Update queries** in handlers
-4. **Test thoroughly**
-
-## Troubleshooting
-
-### Database Connection Failed
-- Verify PostgreSQL is running: `pg_isready`
-- Check credentials in `.env`
-- Ensure database exists: `psql -l`
-
-### OpenAI API Errors
-- Verify API key is correct
-- Check API quota: https://platform.openai.com/usage
-- Check network connectivity
-
-### Port Already in Use
-- Change PORT in `.env`
-- Or kill the process: `lsof -ti:3000 | xargs kill`
-
-## Dependencies
-
-- **fiber/v2**: Web framework
-- **lib/pq**: PostgreSQL driver
-- **go-openai**: OpenAI API client
-- **godotenv**: Environment variable loading
-- **testify**: Testing assertions
 
 ## Deployment
 
-### Using Docker (Recommended)
+### Using Docker
 
 ```dockerfile
 # Create Dockerfile
